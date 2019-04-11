@@ -1,8 +1,5 @@
 # 3DTreeGenerator_Tyd
 
-/on wip/
-
-_Objectifs_
 
 * [ ] Creation de la graine
   * [x] ~~Choix du premier embranchement~~
