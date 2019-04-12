@@ -8,5 +8,6 @@
   * [x] ~~courbure de l'arbre~~
   * [ ] courbure des branches
 * [ ] Génération de l'arbre à partir de la graine
-  * [ ] construction d'une ligne par branche
-  * [ ] génération des feuilles
+  * [x] ~~construction d'une ligne par branche~~
+  * [ ] ajustement de la taille des branches çelon leurs ages
+* [ ] génération des feuilles
