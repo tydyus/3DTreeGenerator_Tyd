@@ -21,52 +21,26 @@ public Seed seed;
        
         if (seed != null)
         {
-            time = 0;
             tree = new GameObject("tree");
-            InvokeRepeating("UpdateTree", 0, speed);
+            tree.transform.SetParent(transform);
+            Seed_Node first_node = new Seed_Node(new Vector3(0,0,0));
+            foreach (Seed_Node node in seed.nodes) if (node.Old == 0) first_node = node;
+            GenBranch(first_node, seed, 1);
         }
         else if (is_debug) Debug.Log("generate the seed for generate the tree");
 	}
 
-    void UpdateTree()
+    public void GenBranch(Seed_Node parent, Seed seed, int id_branch)
     {
-        if (is_debug) Debug.Log("generate Tree BEGIN");
-        if (time > 0)
-        {
-            foreach (Seed_Node node in seed.nodes)
-            {
-                if (is_debug) Debug.Log("test");
-                if (node.Old == time )
-                {
-                    if (is_debug) Debug.Log("Create Branch BEGIN");
-                    GameObject branch = new GameObject("branch");
-                    branch.transform.SetParent(tree.transform);
-                    branch.AddComponent<LineRenderer>();
-                    //branch.GetComponent<LineRenderer>().numCapVertices = 10;
-                    branch.GetComponent<LineRenderer>().material =
-                        Resources.Load("Materials/TreeBase", typeof(Material)) as Material;
-                    branch.AddComponent<Growning_branch>();
-                    branch.GetComponent<Growning_branch>().Start_Branch(
-                        node.Parent.Center, node.Center, seed.Size_Base, seed.Maturate, node.Old, speed);
-                    if (is_debug) Debug.Log("Create Branch");
-
-                }
-
-            }
-        }
-
-        if (time < seed.Old)
-        {
-            if (is_debug) Debug.Log("genTree step " + time);
-            time++;
-        }
-        else
-        {
-            if (is_debug) Debug.Log("ENDING gentree");
-            CancelInvoke();
-        }
-        
-
+        GameObject branch = new GameObject("branch");
+        branch.transform.SetParent(tree.transform);
+        branch.AddComponent<GenBranch>();
+        //set list node
+        List<Seed_Node> nodes = new List<Seed_Node>();
+        foreach (Seed_Node node in seed.nodes) if (node.Branch == id_branch) nodes.Add(node);
+        if (is_debug)  foreach (Seed_Node node in nodes) Debug.Log("add node time "+node.Old);
+        //
+        branch.GetComponent<GenBranch>().StartBranch(parent.Old, seed.Old, parent, nodes, seed); // start gen
     }
-	
+
 }

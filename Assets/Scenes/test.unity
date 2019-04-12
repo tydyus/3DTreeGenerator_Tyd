@@ -534,7 +534,7 @@ Prefab:
     - target: {fileID: 114843729859762138, guid: a68db183f4d8917468cc16d9434d725f,
         type: 2}
       propertyPath: Size_Base
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114843729859762138, guid: a68db183f4d8917468cc16d9434d725f,
         type: 2}
@@ -569,17 +569,17 @@ Prefab:
     - target: {fileID: 114843729859762138, guid: a68db183f4d8917468cc16d9434d725f,
         type: 2}
       propertyPath: Old
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 114843729859762138, guid: a68db183f4d8917468cc16d9434d725f,
         type: 2}
       propertyPath: courbure.x
-      value: 3
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 114843729859762138, guid: a68db183f4d8917468cc16d9434d725f,
         type: 2}
       propertyPath: courbure.y
-      value: 3
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 114122672727689420, guid: a68db183f4d8917468cc16d9434d725f,
         type: 2}
@@ -590,6 +590,16 @@ Prefab:
         type: 2}
       propertyPath: Angle_Branch
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114843729859762138, guid: a68db183f4d8917468cc16d9434d725f,
+        type: 2}
+      propertyPath: First_Branch
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114843729859762138, guid: a68db183f4d8917468cc16d9434d725f,
+        type: 2}
+      propertyPath: Frequence_Branch
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a68db183f4d8917468cc16d9434d725f, type: 2}

@@ -124,19 +124,20 @@ public class BuilderSeed : MonoBehaviour {
         Vector3 angle = center +(center - parent.Center);
         angle = RotatePointAroundPivot(angle, parent.Center, new Vector3(courbure.x, 0, courbure.y));
 
+        if (is_newBranch) parent.is_newBranch = true; //si le début d'une nouvelle branche
+            
+
         int branch = parent.Branch;
         if (parent.is_newBranch)
         {
             branch = total_branch;
+            parent.newBranch_id = total_branch;
             total_branch++;
         }
 
 
-        bool newbranch = false;
-        if (is_newBranch) newbranch = true; //si le début d'une nouvelle branche
 
-
-        node = new Seed_Node(parent.Old + 1, center, angle, parent, branch, newbranch);
+        node = new Seed_Node(parent.Old + 1, center, angle, parent, branch);
         if (is_debug) Debug.Log("Seed: add node in " + node.Center);
         return node;
     }

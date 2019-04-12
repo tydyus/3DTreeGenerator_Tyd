@@ -52,6 +52,7 @@ public class Seed_Node
     public Vector3 Angle { get; set; } /* courbure de la tige*/
     public int Branch { get; set; } /* embranchement */
     public bool is_newBranch = false;
+    public int newBranch_id { get; set; } /* id new embranchement */
     public Seed_Node Parent { get; set; } /* " */
 
     /// <summary>
