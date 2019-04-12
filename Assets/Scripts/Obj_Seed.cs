@@ -28,7 +28,8 @@ public class Seed  {
     /// <summary>
     /// Initializes a tree. /> class.
     /// </summary>
-    public Seed(int old, int maturate, float size_Base, float size_Branch, float angle_Branch = 10, int first_branch = 4, int frequence_node = 50)
+    public Seed(int old, int maturate, float size_Base, float size_Branch, 
+        float angle_Branch = 10, int first_branch = 4, int frequence_node = 50)
     {
         Old = old;
         Maturate = maturate;

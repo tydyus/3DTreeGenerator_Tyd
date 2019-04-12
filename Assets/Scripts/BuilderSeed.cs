@@ -18,6 +18,10 @@ public class BuilderSeed : MonoBehaviour {
     private float Size_Branch; //    taille branche  
     [SerializeField]
     private float Angle_Branch = 10; //    angle embranchement 
+    [SerializeField]
+    private int First_Branch = 3; //         
+    [SerializeField]
+    private int Frequence_Branch = 50; //         %
 
     private Seed seed; // initialise the seed
     int total_branch; // init branch
@@ -34,7 +38,8 @@ public class BuilderSeed : MonoBehaviour {
     {
         if (is_debug) Debug.Log("generate seed BEGIN");
 
-        seed = new Seed(Old, Maturate, Size_Base, Size_Branch, Angle_Branch);   // instanciate the seed
+        // instanciate the seed
+        seed = new Seed(Old, Maturate, Size_Base, Size_Branch, Angle_Branch, First_Branch, Frequence_Branch);   
         int time = 0;   // Set the time of growning
         total_branch = 1;
 
@@ -72,7 +77,7 @@ public class BuilderSeed : MonoBehaviour {
 
                     bool is_branch = false;
                     /* determine si embranchement */
-                    if (time == seed.First_Branch || seed.Frequence_Branch > Random.Range(0,99) ) is_branch = true;
+                    if (time == seed.First_Branch || time > seed.First_Branch & seed.Frequence_Branch > Random.Range(0,99) ) is_branch = true;
                     /**/
                     if (is_branch)
                     {
@@ -110,6 +115,12 @@ public class BuilderSeed : MonoBehaviour {
             center = RotatePointAroundPivot(center, parent.Parent.Center, 
                 new Vector3(Random.Range(-seed.Angle_Branch, seed.Angle_Branch), 0, Random.Range(-seed.Angle_Branch, seed.Angle_Branch)));
         }
+
+        /*Correction emplacement nextNode*/
+        float distance = Vector3.Distance(center, parent.Center);
+        center = Vector3.Lerp(parent.Center, center, Distance_nodes / distance);
+        /**/
+
         Vector3 angle = center +(center - parent.Center);
         angle = RotatePointAroundPivot(angle, parent.Center, new Vector3(courbure.x, 0, courbure.y));
 
