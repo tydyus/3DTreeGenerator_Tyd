@@ -1,6 +1,8 @@
 # 3DTreeGenerator_Tyd
 
+![Alt Text](https://media.giphy.com/media/SsTqk39zQAFkWhQzGg/giphy.gif)
 
+TODO
 * [ ] Creation de la graine
   * [x] ~~Choix du premier embranchement~~
   * [x] ~~Fréquence des embranchements suivant~~
