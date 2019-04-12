@@ -11,5 +11,5 @@ TODO
   * [ ] courbure des branches
 * [ ] Génération de l'arbre à partir de la graine
   * [x] ~~construction d'une ligne par branche~~
-  * [ ] ajustement de la taille des branches çelon leurs ages
+  * [ ] ajustement de la taille des branches en fonction leurs ages
 * [ ] génération des feuilles
