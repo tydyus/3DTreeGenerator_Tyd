@@ -9,6 +9,8 @@ public Seed seed;
     //DEV
     [SerializeField]
     private bool is_debug = false;
+    [SerializeField]
+    private bool DontCleanScript = false;
 
     //parameters of growning
     private int time = -1;
@@ -40,6 +42,9 @@ public Seed seed;
         foreach (Seed_Node node in seed.nodes) if (node.Branch == id_branch) nodes.Add(node);
         if (is_debug)  foreach (Seed_Node node in nodes) Debug.Log("add node time "+node.Old);
         //
+        if (nodes[0].is_secondaire) branch.GetComponent<GenBranch>().is_Fondamental = false;
+        else branch.GetComponent<GenBranch>().is_Fondamental = true;
+        if (DontCleanScript) branch.GetComponent<GenBranch>().clean = false;
         branch.GetComponent<GenBranch>().StartBranch(parent.Old, seed.Old, parent, nodes, seed); // start gen
     }
 

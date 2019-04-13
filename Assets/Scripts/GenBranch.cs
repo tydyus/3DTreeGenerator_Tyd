@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class GenBranch : MonoBehaviour {
 
+    public bool is_Fondamental = true;
+
+    public bool clean = true;
+
     private Seed_Node NodeOrigine;
     private Seed_Node NextNode;
     private List<Seed_Node> Nodes;
@@ -34,6 +38,8 @@ public class GenBranch : MonoBehaviour {
         Time = time+1;
         ActualTime = time;
         id_node = 0;
+        float size = seed.Size_Base;
+        if (nodes[0].is_secondaire) size = seed.Size_Branch;
 
         //set line
         gameObject.AddComponent<LineRenderer>();
@@ -41,7 +47,8 @@ public class GenBranch : MonoBehaviour {
         gameObject.GetComponent<LineRenderer>().SetPosition(1, NodeOrigine.Center);
         gameObject.GetComponent<LineRenderer>().material =
                         Resources.Load("Materials/TreeBase", typeof(Material)) as Material;
-        SizeBranch = new AnimationCurve(new Keyframe(0, seed.Size_Base), new Keyframe(1, 0.2f));
+        SizeBranch = new AnimationCurve(
+            new Keyframe(0, size),new Keyframe((seed.Old-seed.Maturate)/seed.Old, size), new Keyframe(1, 0.2f));
         gameObject.GetComponent<LineRenderer>().widthCurve = SizeBranch;
         
 
@@ -79,7 +86,7 @@ public class GenBranch : MonoBehaviour {
             // embranchement
             if (NextNode.is_newBranch) transform.parent.parent.GetComponent<BuilderTree>().GenBranch(NextNode, seed, NextNode.newBranch_id);
         }
-        if (Time > Old & gameObject.GetComponent<LineRenderer>().GetPosition(id_node - 1) == NextNode.Center)
+        if (Time > Old & gameObject.GetComponent<LineRenderer>().GetPosition(id_node - 1) == NextNode.Center & clean)
         {
             Destroy(this); // clean script
             CancelInvoke(); // fin de pousse de la branche
