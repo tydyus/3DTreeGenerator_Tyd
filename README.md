@@ -13,10 +13,11 @@ TODO
 * [ ] Génération de l'arbre à partir de la graine
   * [x] ~~construction d'une ligne par branche~~
   * [x] /revoir?/~~ajustement de la taille des branches en fonction leurs ages~~
+  * [ ] Materiel d'arbre paramétrable
 * [ ] Génération des feuilles
   * [ ] densité/nombre
   * [ ] taille x/y
-  * [ ] shader age
+  * [ ] Materiel pouvant paramétrer l'age
   * [ ] age random/fixe
 * [ ] Création notice d'utilisation
   * [ ] explication mise en place
