@@ -6,7 +6,7 @@ TODO
 * **Creation de la graine**
    * [x] ~~Branche Secondaire/Fondamentale~~
    * [x] ~~Choix du premier embranchement~~
-   * [x] ~~Rang max de generation de branches Fondamentales ~~
+   * [x] ~~Rang max de generation de branches Fondamentales~~
    * [ ] Fréquence des embranchements suivants
       * [x] ~~Fondamentale~~
       * [x] ~~Secondaire~~
