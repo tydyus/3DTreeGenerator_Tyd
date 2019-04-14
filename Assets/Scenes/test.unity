@@ -392,7 +392,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 850142445}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 46.2, z: -131.9}
+  m_LocalPosition: {x: 0, y: 69.8, z: -131.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -534,7 +534,7 @@ Prefab:
     - target: {fileID: 114843729859762138, guid: a68db183f4d8917468cc16d9434d725f,
         type: 2}
       propertyPath: Size_Base
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114843729859762138, guid: a68db183f4d8917468cc16d9434d725f,
         type: 2}
@@ -569,7 +569,7 @@ Prefab:
     - target: {fileID: 114843729859762138, guid: a68db183f4d8917468cc16d9434d725f,
         type: 2}
       propertyPath: Old
-      value: 25
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114843729859762138, guid: a68db183f4d8917468cc16d9434d725f,
         type: 2}
@@ -589,27 +589,37 @@ Prefab:
     - target: {fileID: 114843729859762138, guid: a68db183f4d8917468cc16d9434d725f,
         type: 2}
       propertyPath: Angle_Branch
-      value: 20
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 114843729859762138, guid: a68db183f4d8917468cc16d9434d725f,
         type: 2}
       propertyPath: First_Branch
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114843729859762138, guid: a68db183f4d8917468cc16d9434d725f,
         type: 2}
       propertyPath: Frequence_Branch
-      value: 50
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 114122672727689420, guid: a68db183f4d8917468cc16d9434d725f,
         type: 2}
       propertyPath: DontCleanScript
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114843729859762138, guid: a68db183f4d8917468cc16d9434d725f,
         type: 2}
       propertyPath: MaxRank_Fondamental
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114843729859762138, guid: a68db183f4d8917468cc16d9434d725f,
+        type: 2}
+      propertyPath: Angle_Branch_Secondaire
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114843729859762138, guid: a68db183f4d8917468cc16d9434d725f,
+        type: 2}
+      propertyPath: courbure_Secondaire.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a68db183f4d8917468cc16d9434d725f, type: 2}
