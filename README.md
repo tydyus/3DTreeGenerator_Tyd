@@ -29,3 +29,4 @@ TODO
 * **Création notice d'utilisation**
    * [ ] explication mise en place
    * [ ] explication paramètres
+   * [ ] notice anglais/français
