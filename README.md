@@ -1,8 +1,8 @@
 # 3DTreeGenerator_Tyd
 
-![Alt Text](https://media.giphy.com/media/W3SzP3fFlOqmq08fSZ/giphy.gif)
+![Alt Text](https://media.giphy.com/media/QWFxPK2yFjDAbPmfbu/giphy.gif) ![Alt Text](https://media.giphy.com/media/fqsHpwKOb11EMu4gFA/giphy.gif)
 
-TODO
+##TODO
 * **Creation de la graine**
    * [x] ~~Branche Secondaire/Fondamentale~~
    * [x] ~~Choix du premier embranchement~~
@@ -22,8 +22,14 @@ TODO
    * [x] /revoir?/~~ajustement de la taille des branches en fonction leurs ages~~
    * [ ] Materiel d'arbre paramétrable
 * **Génération des feuilles**
-   * [ ] densité/nombre
-   * [ ] taille x/y
+   * [ ] /!\ Corriger angle 
+   * [ ] Création Prefabs
+      * [x] ~~Création Prefabs basique~~
+      * [ ] variation de la forme du Prefabs
+   * [x] ~~densité/nombre~~
+   * [ ] taille
+      * [x] Global
+      * [ ] Forme  
    * [ ] Materiel pouvant paramétrer l'age
    * [ ] age random/fixe
 * **Création notice d'utilisation**
