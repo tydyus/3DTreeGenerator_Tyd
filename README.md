@@ -2,7 +2,7 @@
 
 ![Alt Text](https://media.giphy.com/media/QWFxPK2yFjDAbPmfbu/giphy.gif) ![Alt Text](https://media.giphy.com/media/fqsHpwKOb11EMu4gFA/giphy.gif)
 
-TODO
+##TODO
 * **Creation de la graine**
    * [x] ~~Branche Secondaire/Fondamentale~~
    * [x] ~~Choix du premier embranchement~~
@@ -22,11 +22,14 @@ TODO
    * [x] /revoir?/~~ajustement de la taille des branches en fonction leurs ages~~
    * [ ] Materiel d'arbre paramétrable
 * **Génération des feuilles**
+   * [ ] <span style='color:red'> ! Corriger angle </span>
    * [ ] Création Prefabs
       * [x] ~~Création Prefabs basique~~
       * [ ] variation de la forme du Prefabs
-   * [ ] densité/nombre
-   * [ ] taille x/y
+   * [x] ~~densité/nombre~~
+   * [ ] taille
+      * [x] Global
+      * [ ] Forme  
    * [ ] Materiel pouvant paramétrer l'age
    * [ ] age random/fixe
 * **Création notice d'utilisation**
