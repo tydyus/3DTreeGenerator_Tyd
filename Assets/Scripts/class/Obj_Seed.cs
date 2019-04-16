@@ -18,6 +18,9 @@ public class Seed  {
     public int Frequence_Branch_Secondaire { get; set; }
     public int Nbr_Branch;
     public int Nbr_Branch_Fondamental;
+    public AnimationCurve Density_Leaf = new AnimationCurve(new Keyframe(0, 1));
+    public int Frequence_Leaf { get; set; }
+    public float Size_Leaf { get; set; }
 
 
     public List<Seed_Node> nodes = new List<Seed_Node>();
@@ -39,7 +42,8 @@ public class Seed  {
     public Seed(int old, int maturate, float size_Base, float size_Branch, 
         float angle_Branch = 10, int first_branch = 4, int frequence_Branch = 80,
         int frequence_Branch_Secondaire = 30, int old_secondaire = 3,
-        int maxnbr_Branch_Fondamental = 3, int maxRank_Branch_Fondamental = 2, float angle_Branch_f = 10)
+        int maxnbr_Branch_Fondamental = 3, int maxRank_Branch_Fondamental = 2, float angle_Branch_f = 10,
+        int frequence_Leaf = 50, float size_leaf = 1)
     {
         Nbr_Branch_Fondamental = 1;
         Nbr_Branch = 1;
@@ -55,6 +59,8 @@ public class Seed  {
         Old__Branch_Secondaire = old_secondaire;
         MaxNbr_Branch_Fondamental = maxnbr_Branch_Fondamental;
         MaxRank_Branch_Fondamental = maxRank_Branch_Fondamental;
+        Frequence_Leaf = frequence_Leaf;
+        Size_Leaf = size_leaf;
 
     }
    

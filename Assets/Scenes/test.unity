@@ -405,6 +405,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114843729859762138, guid: a68db183f4d8917468cc16d9434d725f,
+        type: 2}
+      propertyPath: Density_Leaf.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4921293043393326, guid: a68db183f4d8917468cc16d9434d725f, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -620,6 +625,46 @@ Prefab:
         type: 2}
       propertyPath: courbure_Secondaire.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114843729859762138, guid: a68db183f4d8917468cc16d9434d725f,
+        type: 2}
+      propertyPath: Frequence_Leaf
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114843729859762138, guid: a68db183f4d8917468cc16d9434d725f,
+        type: 2}
+      propertyPath: Density_Leaf.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114843729859762138, guid: a68db183f4d8917468cc16d9434d725f,
+        type: 2}
+      propertyPath: Density_Leaf.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114843729859762138, guid: a68db183f4d8917468cc16d9434d725f,
+        type: 2}
+      propertyPath: Density_Leaf.m_Curve.Array.data[0].value
+      value: 0.000045776367
+      objectReference: {fileID: 0}
+    - target: {fileID: 114843729859762138, guid: a68db183f4d8917468cc16d9434d725f,
+        type: 2}
+      propertyPath: Density_Leaf.m_Curve.Array.data[0].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114843729859762138, guid: a68db183f4d8917468cc16d9434d725f,
+        type: 2}
+      propertyPath: Density_Leaf.m_Curve.Array.data[0].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114843729859762138, guid: a68db183f4d8917468cc16d9434d725f,
+        type: 2}
+      propertyPath: Size_Leaf
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114843729859762138, guid: a68db183f4d8917468cc16d9434d725f,
+        type: 2}
+      propertyPath: Density_Leaf.m_Curve.Array.data[0].time
+      value: 0.7479172
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a68db183f4d8917468cc16d9434d725f, type: 2}

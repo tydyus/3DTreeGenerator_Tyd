@@ -32,6 +32,12 @@ public class BuilderSeed : MonoBehaviour {
     private int Max_nbr_Fondamental = 5; // nombre max de branche principale
     [SerializeField]
     private int MaxRank_Fondamental = 2; // zones'apparition des branches principales
+    [SerializeField]
+    private AnimationCurve Density_Leaf = new AnimationCurve(new Keyframe(0, 1));
+    [SerializeField]
+    private int Frequence_Leaf = 20;
+    [SerializeField]
+    private float Size_Leaf = 1;
 
     private Seed seed; // initialise the seed
     int total_branch; // init branch
@@ -52,7 +58,9 @@ public class BuilderSeed : MonoBehaviour {
 
         // instanciate the seed
         seed = new Seed(Old, Maturate, Size_Base, Size_Branch, Angle_Branch, First_Branch, Frequence_Branch,
-            Frequence_Branch_Secondaire, Old_Secondaire, Max_nbr_Fondamental, MaxRank_Fondamental, Angle_Branch_Secondaire);   
+            Frequence_Branch_Secondaire, Old_Secondaire, Max_nbr_Fondamental, MaxRank_Fondamental, Angle_Branch_Secondaire,
+            Frequence_Leaf, Size_Leaf);
+        seed.Density_Leaf = Density_Leaf;
         int time = 0;   // Set the time of growning
         total_branch = 1;
 

@@ -65,9 +65,26 @@ public class GenBranch : MonoBehaviour {
         if (ActualTime == Time) //suivi du node actuel
         {
             grown += 1/ UpdateForTime;
-            gameObject.GetComponent<LineRenderer>().SetPosition(id_node,
-                Vector3.Lerp(gameObject.GetComponent<LineRenderer>().GetPosition(id_node - 1),
-                NextNode.Center, grown));
+            // set position/rotation
+            Vector3 pos = Vector3.Lerp(gameObject.GetComponent<LineRenderer>().GetPosition(id_node - 1),
+                NextNode.Center, grown);
+            Quaternion rot = Quaternion.LookRotation(
+                NextNode.Center, gameObject.GetComponent<LineRenderer>().GetPosition(id_node - 1));
+            // update position?forme de la branche
+            gameObject.GetComponent<LineRenderer>().SetPosition(id_node, pos);
+            // rajout feuille
+            if (!is_Fondamental & Random.Range(0, 99) < seed.Density_Leaf.Evaluate(grown) * seed.Frequence_Leaf)
+            {
+                //gen
+                GameObject leaf = Instantiate(Resources.Load("Prefabs/Leaf_tree", typeof(GameObject)) as GameObject,
+                    pos,rot,transform);
+                leaf.transform.localScale = new Vector3(seed.Size_Leaf, seed.Size_Leaf, seed.Size_Leaf);
+                leaf.transform.localRotation = rot;
+                int sens = 0;
+                if (Random.Range(0, 99) < 50) sens = 180;
+                leaf.transform.Rotate(new Vector3(0,sens,0));
+            }
+
         }
         else //suivi du prochain node
         {

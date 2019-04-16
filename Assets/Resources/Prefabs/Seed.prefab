@@ -52,6 +52,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74811c87bb439dd47ae4da940479d2f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_debug: 0
+  DontCleanScript: 0
+  speed: 1
 --- !u!114 &114843729859762138
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -63,20 +66,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77b682ac36e3bf0429647294770ca797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DEV_preview: 1
-  seed_Proba: 1
-  use_seed: 0
-  nbr_Node: 7
-  nbr_NodeT: 100
-  nbr_Fork: 0
-  nbr_Branch: 0
-  first_Fork: 0
-  first_Branch: 0
-  prob_Fork: 0
-  prob_Branch: 0
-  size_Old: 2
-  size_Base: 0.1
-  size_Branch: 0
-  space_Nodes: 1
-  deriveX: 0
-  deriveZ: 0
+  is_generate: 0
+  is_debug: 0
+  Maturate: 0
+  Size_Base: 0
+  Size_Branch: 0
+  Angle_Branch: 10
+  Angle_Branch_Secondaire: 20
+  First_Branch: 3
+  Frequence_Branch: 50
+  Frequence_Branch_Secondaire: 50
+  Old_Secondaire: 5
+  Max_nbr_Fondamental: 5
+  MaxRank_Fondamental: 2
+  Density_Leaf:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  Frequence_Leaf: 20
+  Size_Leaf: 1
+  Old: 20
+  Distance_nodes: 1
+  courbure: {x: 0, y: 0}
+  courbure_Secondaire: {x: 0, y: -0.1, z: 0}
