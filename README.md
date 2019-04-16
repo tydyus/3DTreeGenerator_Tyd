@@ -22,7 +22,7 @@
    * [x] /revoir?/~~ajustement de la taille des branches en fonction leurs ages~~
    * [ ] Materiel d'arbre paramétrable
 * **Génération des feuilles**
-   * [ ] <span style='color:red'> ! Corriger angle </span>
+   * [ ] /!\ Corriger angle 
    * [ ] Création Prefabs
       * [x] ~~Création Prefabs basique~~
       * [ ] variation de la forme du Prefabs
