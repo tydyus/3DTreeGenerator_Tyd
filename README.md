@@ -2,7 +2,7 @@
 
 ![Alt Text](https://media.giphy.com/media/QWFxPK2yFjDAbPmfbu/giphy.gif) ![Alt Text](https://media.giphy.com/media/fqsHpwKOb11EMu4gFA/giphy.gif)
 
-##TODO
+## Plan de travail
 * **Creation de la graine**
    * [x] ~~Branche Secondaire/Fondamentale~~
    * [x] ~~Choix du premier embranchement~~
@@ -36,3 +36,6 @@
    * [ ] explication mise en place
    * [ ] explication paramètres
    * [ ] notice anglais/français
+   
+## Notice
+//prochainement
